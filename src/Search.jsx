@@ -28,7 +28,7 @@ const SearchBar = ({ updateWeather }) => {
   };
 
   return (
-    <nav className="search-container">
+    <nav>
       <input
         type="text"
         placeholder="Type in a city name..."

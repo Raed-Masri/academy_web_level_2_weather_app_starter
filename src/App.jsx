@@ -55,7 +55,7 @@ const App = () => {
             <WeatherDisplay data={weatherData} />
           </div>
         )}
-        {forecastData.length > 0 &&   <HourlyForecast forecast={forecastData} />}
+        {forecastData.length > 0 && <HourlyForecast forecast={forecastData} />}
       </div>
     </div>
   );

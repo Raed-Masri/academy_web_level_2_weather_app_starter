@@ -27,7 +27,7 @@ nav {
   padding: 10px;
   font-size: 16px;
   color: white;
-  border: 0px solid #ccc;
+  border: 0px;
   background-color: transparent;
   outline: none;
 }
@@ -48,17 +48,19 @@ nav {
 }
 
 /* Weather Display */
-img{
+img {
   width: 200px;
-  height: 200x ;
+  height: 200x;
 }
 .weather-display {
   margin-bottom: 20px;
 }
 
-.weather-display h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.weather-display h2, .desc {
+  color: navy;
+}
+span{
+  font-weight: bold;
 }
 
 .weather-description {
@@ -80,5 +82,11 @@ img{
   border-radius: 5px;
   width: 80px;
   text-align: center;
-  font-size: 14px;
+  color: navy;
+  font-weight: bold;
+  font-size: 15px;
+}
+.hourly-icon {
+  width: 50px;
+  height: 50px;
 }
