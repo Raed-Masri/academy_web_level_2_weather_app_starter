@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
+::-webkit-scrollbar {
+  display: none;
+}
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -10,28 +12,29 @@ body {
 .app-container {
   min-height: 100vh;
   color: white;
-  padding: 20px;
   transition: background-color 0.5s ease;
 }
 
 /* Search Bar */
-.search-container {
+nav {
+  background-color: rgb(121, 162, 223);
+  padding: 10px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .search-input {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  color: white;
+  border: 0px solid #ccc;
+  background-color: transparent;
   outline: none;
 }
 
 .search-button {
-  background-color: #3498db;
-  color: white;
+  background-color: #1983ca;
+  color: navy;
   padding: 10px 15px;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -45,6 +48,10 @@ body {
 }
 
 /* Weather Display */
+img{
+  width: 200px;
+  height: 200x ;
+}
 .weather-display {
   margin-bottom: 20px;
 }

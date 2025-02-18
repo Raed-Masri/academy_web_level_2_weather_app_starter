@@ -8,11 +8,13 @@ const App = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [forecastData, setForecastData] = useState([]);
   const [background, setBackground] = useState("#1e3a8a");
+  const [weatherIcon, setWeatherIcon] = useState("clear.svg");
 
   const updateWeather = (data, forecast) => {
     setWeatherData(data);
     setForecastData(forecast);
     updateBackground(data.weather[0].main);
+    updateIcon(data.weather[0].id);
   };
 
   const updateBackground = (condition) => {
@@ -28,13 +30,32 @@ const App = () => {
     };
     setBackground(backgrounds[condition] || "#1e3a8a");
   };
-
+  const updateIcon = (weatherId) => {
+    if (weatherId < 300) setWeatherIcon("storm.svg");
+    else if (weatherId >= 300 && weatherId < 500) setWeatherIcon("drizzle.svg");
+    else if (weatherId >= 500 && weatherId < 600) setWeatherIcon("rain.svg");
+    else if (weatherId >= 600 && weatherId < 700) setWeatherIcon("snow.svg");
+    else if (weatherId >= 700 && weatherId < 800) setWeatherIcon("fog.svg");
+    else if (weatherId === 800) setWeatherIcon("clear.svg");
+    else if (weatherId === 801) setWeatherIcon("partlycloudy.svg");
+    else if (weatherId > 801 && weatherId <= 805)
+      setWeatherIcon("mostlycloudy.svg");
+  };
   return (
     <div className="app-container" style={{ backgroundColor: background }}>
       <div className="content-container">
         <SearchBar updateWeather={updateWeather} />
-        {weatherData && <WeatherDisplay data={weatherData} />}
-        {forecastData.length > 0 && <HourlyForecast forecast={forecastData} />}
+        {weatherData && (
+          <div>
+            <img
+              src={`./images/weather-icons/${weatherIcon}`}
+              alt="Weather Icon"
+              className="weather-icon"
+            />
+            <WeatherDisplay data={weatherData} />
+          </div>
+        )}
+        {forecastData.length > 0 &&   <HourlyForecast forecast={forecastData} />}
       </div>
     </div>
   );

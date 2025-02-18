@@ -28,10 +28,10 @@ const SearchBar = ({ updateWeather }) => {
   };
 
   return (
-    <div className="search-container">
+    <nav className="search-container">
       <input
         type="text"
-        placeholder="Enter city..."
+        placeholder="Type in a city name..."
         className="search-input"
         value={city}
         onChange={(e) => setCity(e.target.value)}
@@ -39,7 +39,7 @@ const SearchBar = ({ updateWeather }) => {
       <button onClick={fetchWeather} className="search-button">
         Find Weather
       </button>
-    </div>
+    </nav>
   );
 };
 
