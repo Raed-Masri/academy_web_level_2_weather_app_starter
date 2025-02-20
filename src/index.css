@@ -2,7 +2,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
-body {
+* {
   font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
@@ -47,28 +47,33 @@ nav {
   background-color: #2980b9;
 }
 
-/* Weather Display */
+/* Weather Display ------------------------------------------------------------- */
 img {
   width: 200px;
   height: 200x;
 }
 .weather-display {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-.weather-display h2, .desc {
+.weather-display h2,
+.desc {
   color: navy;
+  padding-bottom: 30px;
 }
-span{
+span {
   font-weight: bold;
+  padding-left: 20px;
 }
 
 .weather-description {
   font-size: 18px;
   text-transform: capitalize;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
-/* Hourly Forecast */
+/* Hourly Forecast ---------------------------------------------------*/
 .forecast-container {
   display: flex;
   justify-content: center;
